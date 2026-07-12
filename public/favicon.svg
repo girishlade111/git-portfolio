@@ -1,4 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="20" fill="#0D7377"/>
-  <text x="50" y="64" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="white" text-anchor="middle">P</text>
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ae0d4"/>
+      <stop offset="50%" stop-color="#2a9d8f"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b8f2e8"/>
+      <stop offset="100%" stop-color="#2a9d8f"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#0d3d39"/>
+      <stop offset="100%" stop-color="#2a9d8f"/>
+    </linearGradient>
+  </defs>
+  <!-- 3D isometric cube - front face -->
+  <polygon points="50,12 82,30 50,48 18,30" fill="url(#g1)"/>
+  <!-- right face -->
+  <polygon points="82,30 82,64 50,82 50,48" fill="url(#g2)"/>
+  <!-- left face -->
+  <polygon points="18,30 50,48 50,82 18,64" fill="url(#g3)"/>
+  <!-- subtle highlight edge -->
+  <polygon points="50,12 82,30 50,48 18,30" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
 </svg>
