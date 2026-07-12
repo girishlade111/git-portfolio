@@ -124,15 +124,17 @@ export default function Navbar() {
 
 function NavLink({ href, children }: { href: string; children: string }) {
   return (
-    <Link href={href} className="group relative text-sm font-medium">
-      <span className="text-foreground">{children}</span>
-      <motion.span
-        className="bg-accent absolute -bottom-0.5 left-0 h-[2px]"
-        initial={{ width: 0 }}
-        whileHover={{ width: "100%" }}
-        transition={{ duration: 0.25, ease: "easeInOut" }}
-      />
-    </Link>
+    <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }}>
+      <Link href={href} className="group relative text-sm font-medium">
+        <span className="text-foreground">{children}</span>
+        <motion.span
+          className="bg-accent absolute -bottom-0.5 left-0 h-[2px]"
+          initial={{ width: 0 }}
+          whileHover={{ width: "100%" }}
+          transition={{ duration: 0.25, ease: "easeInOut" }}
+        />
+      </Link>
+    </motion.div>
   );
 }
 
