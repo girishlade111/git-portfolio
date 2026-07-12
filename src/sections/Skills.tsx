@@ -74,14 +74,9 @@ const categories: Category[] = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.06 } },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, ease: "easeOut" as const } },
+const pillVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.35, ease: "easeOut" as const } },
 };
 
 export default function Skills() {
@@ -101,33 +96,35 @@ export default function Skills() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {categories.map((cat) => (
             <div key={cat.label}>
-              <div className="mb-4 flex items-center gap-2">
-                <cat.Icon className="text-accent" size={18} />
-                <h3 className="text-foreground text-sm font-semibold uppercase tracking-wider">
+              <div className="mb-5 flex items-center gap-3">
+                <cat.Icon className="text-accent shrink-0" size={18} />
+                <h3 className="text-foreground shrink-0 text-sm font-semibold uppercase tracking-wider">
                   {cat.label}
                 </h3>
+                <span className="border-muted/20 flex-1 border-t" />
               </div>
 
               <motion.div
-                variants={containerVariants}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2, margin: "-40px" }}
-                className="grid grid-cols-2 gap-2 sm:gap-3"
+                className="flex flex-wrap gap-3"
               >
-                {cat.skills.map((skill) => {
+                {cat.skills.map((skill, i) => {
                   const Icon = skill.icon;
                   return (
                     <motion.div
                       key={skill.name}
-                      variants={cardVariants}
-                      whileHover={{ y: -4, boxShadow: "0 8px 24px rgba(92,122,92,0.12)" }}
-                      className="border-b-accent bg-background group cursor-default rounded-xl border-b-2 p-4 transition-colors"
+                      variants={pillVariants}
+                      transition={{ delay: i * 0.04 }}
+                      className="border-muted/20 hover:border-accent bg-background hover:bg-accent/5 group flex cursor-default items-center gap-2 rounded-full border px-4 py-2.5 transition-all duration-200"
                     >
-                      <Icon className="text-accent mb-2" size={20} />
-                      <p className="text-foreground text-sm font-medium leading-tight">
+                      <span className="bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center rounded-full p-1 transition-colors duration-200">
+                        <Icon className="text-accent" size={14} />
+                      </span>
+                      <span className="text-foreground text-sm font-medium leading-none">
                         {skill.name}
-                      </p>
+                      </span>
                     </motion.div>
                   );
                 })}
