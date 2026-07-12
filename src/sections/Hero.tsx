@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Briefcase, Code2, GitFork } from "lucide-react";
 import Link from "next/link";
@@ -28,9 +29,18 @@ const stats = [
 ];
 
 export default function Hero() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const handleMouse = (e: React.MouseEvent) => {
+    setMousePos({ x: e.clientX, y: e.clientY });
+  };
+
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden pt-16">
+    <section
+      onMouseMove={handleMouse}
+      className="relative flex min-h-screen items-center overflow-hidden pt-16"
+    >
       <FloatingShapes />
+      <CursorGlow x={mousePos.x} y={mousePos.y} />
 
       <Container className="relative z-10">
         <motion.div
@@ -87,6 +97,19 @@ export default function Hero() {
         </motion.div>
       </Container>
     </section>
+  );
+}
+
+function CursorGlow({ x, y }: { x: number; y: number }) {
+  return (
+    <motion.div
+      className="pointer-events-none fixed top-0 left-0 z-50 h-[500px] w-[500px] rounded-full"
+      style={{
+        background:
+          "radial-gradient(circle, rgba(92,122,92,0.08) 0%, transparent 70%)",
+        transform: `translate(calc(${x}px - 50%), calc(${y}px - 50%))`,
+      }}
+    />
   );
 }
 
