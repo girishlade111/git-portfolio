@@ -9,7 +9,6 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { FileText, Menu, X } from "lucide-react";
-import clsx from "clsx";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -33,16 +32,18 @@ export default function Navbar() {
             [0, 1],
             ["rgba(237, 234, 226, 0)", "rgba(237, 234, 226, 1)"]
           ),
+          boxShadow: useTransform(
+            bgOpacity,
+            [0, 1],
+            [
+              "0 0 0 0 rgba(0,0,0,0)",
+              "0 1px 3px 0 rgba(0,0,0,0.06)",
+            ]
+          ),
         }}
-        className={clsx(
-          "fixed inset-x-0 top-0 z-50 transition-shadow duration-300",
-          "shadow-none",
-          useTransform(bgOpacity, [0, 1], [false, true]).get()
-            ? "shadow-sm"
-            : ""
-        )}
+        className="fixed inset-x-0 top-0 z-50 h-16"
       >
-        <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
             className="text-foreground text-lg font-semibold tracking-tight"
