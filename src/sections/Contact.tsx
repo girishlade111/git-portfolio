@@ -55,6 +55,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.2 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-muted/30 text-foreground hover:border-accent hover:text-accent rounded-xl border p-3 transition-colors"
                 aria-label={item.label}
