@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Container from "@/components/ui/container";
+import { asset } from "@/lib/basePath";
 
 const tags = [
   "Multi-Agent Systems",
@@ -38,7 +39,7 @@ export default function About() {
               className="bg-muted/20 border-accent/30 h-48 w-48 overflow-hidden rounded-full border-2 sm:h-56 sm:w-56 md:h-64 md:w-64"
             >
               <img
-                src="/profile.png"
+                src={asset("/profile.png")}
                 alt="Girish Lade"
                 className="h-full w-full object-cover"
               />

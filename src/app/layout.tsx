@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://girishlade.vercel.app"),
+  metadataBase: new URL("https://girishlade111.github.io/git-portfolio"),
   title: "Girish Lade — Data Scientist & AI Engineer Portfolio",
   description:
     "Data scientist and AI engineer specializing in React, TypeScript, and AI research agents. Explore projects, skills, and innovations in machine learning and artificial intelligence.",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://girishlade.vercel.app",
+    url: "https://girishlade111.github.io/git-portfolio",
     siteName: "Girish Lade Portfolio",
     title: "Girish Lade — Data Scientist & AI Engineer Portfolio",
     description:

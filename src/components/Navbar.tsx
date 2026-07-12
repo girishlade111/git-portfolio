@@ -9,6 +9,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { FileText, Menu, X } from "lucide-react";
+import { asset } from "@/lib/basePath";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -148,7 +149,7 @@ function NavLink({ href, children }: { href: string; children: string }) {
 function ResumeButton() {
   return (
     <motion.a
-      href="/resume.pdf"
+      href={asset("/resume.pdf")}
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ scale: 1.03 }}
