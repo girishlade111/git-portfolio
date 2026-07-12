@@ -35,7 +35,7 @@ export default function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.2, margin: "-80px" }}
           transition={{ duration: 0.55, ease: "easeOut" }}
           className="mx-auto max-w-xl text-center"
         >
@@ -54,7 +54,7 @@ export default function Contact() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.15, rotate: -6 }}
+                whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-muted/30 text-foreground hover:border-accent hover:text-accent rounded-xl border p-3 transition-colors"
                 aria-label={item.label}
