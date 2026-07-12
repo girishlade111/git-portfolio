@@ -14,7 +14,7 @@ export default function FeaturedProject() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.2, margin: "-80px" }}
           transition={{ duration: 0.55, ease: "easeOut" }}
           className="bg-accent/8 rounded-3xl p-8 sm:p-12 lg:p-16"
         >
