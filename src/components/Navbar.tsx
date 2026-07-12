@@ -142,7 +142,8 @@ function ResumeButton() {
       href="/resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.2 }}
       whileTap={{ scale: 0.95 }}
       className="border-muted text-foreground hover:bg-accent hover:text-white flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium transition-colors"
       aria-label="Download resume"

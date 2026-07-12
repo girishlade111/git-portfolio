@@ -67,18 +67,22 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <motion.a
               href="#projects"
-              className="bg-accent text-white hover:bg-accent-light rounded-full px-6 py-3 text-sm font-semibold transition-colors"
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.2 }}
+              className="bg-accent text-white hover:bg-accent-light inline-block rounded-full px-6 py-3 text-sm font-semibold transition-colors"
             >
               View Projects
-            </Link>
-            <Link
+            </motion.a>
+            <motion.a
               href="#contact"
-              className="border-accent text-accent hover:bg-accent hover:text-white rounded-full border px-6 py-3 text-sm font-semibold transition-colors"
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.2 }}
+              className="border-accent text-accent hover:bg-accent hover:text-white inline-block rounded-full border px-6 py-3 text-sm font-semibold transition-colors"
             >
               Get in Touch
-            </Link>
+            </motion.a>
           </motion.div>
 
           <motion.div
