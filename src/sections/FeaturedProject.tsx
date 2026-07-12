@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, GithubIcon } from "lucide-react";
+import { ArrowUpRight, GitFork } from "lucide-react";
 import Link from "next/link";
 import Container from "@/components/ui/container";
 
@@ -50,7 +50,7 @@ export default function FeaturedProject() {
               rel="noopener noreferrer"
               className="bg-accent text-white hover:bg-accent-light inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors"
             >
-              <GithubIcon size={18} />
+              <GitFork size={18} />
               View on GitHub
             </Link>
 
