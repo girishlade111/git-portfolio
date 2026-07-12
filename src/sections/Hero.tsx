@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Briefcase, Code2, GitFork } from "lucide-react";
-import Link from "next/link";
 import Container from "@/components/ui/container";
 
 const stagger = {
