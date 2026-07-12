@@ -42,7 +42,7 @@ export default function Contact() {
           <h2 className="text-foreground text-3xl font-bold tracking-tight sm:text-4xl">
             Let&apos;s build something intelligent.
           </h2>
-          <p className="text-muted mt-4 text-base leading-relaxed sm:text-lg">
+          <p className="text-muted mt-4 text-sm leading-relaxed sm:text-base lg:text-lg">
             Open to data science roles, AI research collaborations, and
             freelance projects.
           </p>
@@ -75,7 +75,7 @@ export default function Contact() {
           className="mx-auto mt-12 max-w-lg space-y-5"
         >
           <motion.div variants={fadeUp}>
-            <label htmlFor="name" className="text-foreground/70 mb-1.5 block text-sm font-medium">
+            <label htmlFor="name" className="text-foreground/70 mb-1.5 block text-xs font-medium sm:text-sm">
               Name
             </label>
             <input
@@ -87,7 +87,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.div variants={fadeUp}>
-            <label htmlFor="email" className="text-foreground/70 mb-1.5 block text-sm font-medium">
+            <label htmlFor="email" className="text-foreground/70 mb-1.5 block text-xs font-medium sm:text-sm">
               Email
             </label>
             <input
@@ -99,7 +99,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.div variants={fadeUp}>
-            <label htmlFor="message" className="text-foreground/70 mb-1.5 block text-sm font-medium">
+            <label htmlFor="message" className="text-foreground/70 mb-1.5 block text-xs font-medium sm:text-sm">
               Message
             </label>
             <textarea

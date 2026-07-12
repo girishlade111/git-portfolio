@@ -15,17 +15,17 @@ export default function FeaturedProject() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.2, margin: "-80px" }}
           transition={{ duration: 0.55, ease: "easeOut" }}
-          className="bg-accent/8 rounded-3xl p-8 sm:p-12 lg:p-16"
+          className="bg-accent/8 rounded-3xl p-6 sm:p-8 lg:p-12 xl:p-16"
         >
           <span className="bg-accent/15 text-accent mb-4 inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider">
             Featured Project
           </span>
 
-          <h3 className="text-foreground text-3xl font-bold tracking-tight sm:text-4xl">
+          <h3 className="text-foreground text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
             research-ai-agent
           </h3>
 
-          <p className="text-foreground/75 mt-4 max-w-2xl text-base leading-relaxed sm:text-lg">
+          <p className="text-foreground/75 mt-4 max-w-2xl text-sm leading-relaxed sm:text-base lg:text-lg">
             Next-generation multi-agent research engine transforming raw queries
             into structured, verified intelligence reports. Built with
             TypeScript.
@@ -35,7 +35,7 @@ export default function FeaturedProject() {
             {tech.map((t) => (
               <span
                 key={t}
-                className="bg-accent/10 text-accent rounded-full px-3 py-1 text-sm font-medium"
+                className="bg-accent/10 text-accent rounded-full px-3 py-1 text-xs font-medium sm:text-sm"
               >
                 {t}
               </span>

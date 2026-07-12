@@ -50,7 +50,7 @@ export default function Hero() {
         >
           <motion.h1
             variants={fadeUp}
-            className="text-foreground text-5xl leading-tight font-bold tracking-tight sm:text-6xl lg:text-7xl"
+            className="text-foreground text-4xl leading-tight font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Turning data into decisions with{" "}
             <span className="text-accent">AI-driven</span> systems.
@@ -58,7 +58,7 @@ export default function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="text-muted mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl"
+            className="text-muted mt-6 max-w-2xl text-base leading-relaxed sm:text-lg md:text-xl"
           >
             Data Scientist specializing in React, TypeScript, and autonomous AI
             research agents. Currently building next-gen multi-agent research
@@ -90,7 +90,7 @@ export default function Hero() {
           >
             {stats.map((stat) => (
               <div key={stat.label} className="flex items-center gap-2">
-                <stat.icon className="text-accent" size={18} />
+                <stat.icon className="text-accent shrink-0" size={18} />
                 <span className="text-foreground text-sm font-medium">
                   {stat.label}
                 </span>
@@ -106,7 +106,7 @@ export default function Hero() {
 function CursorGlow({ x, y }: { x: number; y: number }) {
   return (
     <motion.div
-      className="pointer-events-none fixed top-0 left-0 z-50 h-[500px] w-[500px] rounded-full"
+      className="pointer-events-none fixed top-0 left-0 z-50 hidden h-[500px] w-[500px] rounded-full md:block"
       style={{
         background:
           "radial-gradient(circle, rgba(92,122,92,0.08) 0%, transparent 70%)",
@@ -122,17 +122,17 @@ function FloatingShapes() {
       <motion.div
         animate={{ y: [0, -40, 0], opacity: [0.2, 0.35, 0.2] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="bg-accent/15 absolute -top-20 -right-20 h-96 w-96 rounded-full blur-3xl"
+        className="bg-accent/15 absolute -top-20 -right-20 h-48 w-48 sm:h-72 sm:w-72 lg:h-96 lg:w-96 rounded-full blur-3xl"
       />
       <motion.div
         animate={{ y: [0, 50, 0], opacity: [0.15, 0.3, 0.15] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="bg-accent/10 absolute -bottom-32 -left-20 h-[28rem] w-[28rem] rounded-full blur-3xl"
+        className="bg-accent/10 absolute -bottom-32 -left-20 hidden h-[28rem] w-[28rem] rounded-full blur-3xl sm:block"
       />
       <motion.div
         animate={{ y: [0, -30, 0], opacity: [0.1, 0.25, 0.1] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        className="bg-accent/10 absolute top-1/3 right-1/4 h-64 w-64 rounded-full blur-3xl"
+        className="bg-accent/10 absolute top-1/3 right-1/4 hidden h-64 w-64 rounded-full blur-3xl lg:block"
       />
     </div>
   );

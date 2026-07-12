@@ -75,7 +75,7 @@ export default function Projects() {
               className="border-muted/30 hover:border-accent group rounded-2xl border p-6 transition-colors"
             >
               <div className="flex items-start justify-between gap-4">
-                <h3 className="text-foreground text-lg font-semibold tracking-tight">
+                <h3 className="text-foreground break-all text-lg font-semibold tracking-tight">
                   {project.name}
                 </h3>
                 <motion.a

@@ -35,16 +35,16 @@ export default function About() {
             <motion.div
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="bg-muted/20 border-accent/30 h-64 w-64 overflow-hidden rounded-full border-2 sm:h-72 sm:w-72"
+              className="bg-muted/20 border-accent/30 h-48 w-48 overflow-hidden rounded-full border-2 sm:h-56 sm:w-56 md:h-64 md:w-64"
             >
-              <div className="flex h-full items-center justify-center text-6xl">
+              <div className="flex h-full items-center justify-center text-5xl sm:text-6xl">
                 <span className="text-muted/40 select-none">GL</span>
               </div>
             </motion.div>
           </div>
 
           <div className="md:col-span-3">
-            <p className="text-foreground text-base leading-relaxed sm:text-lg">
+            <p className="text-foreground text-sm leading-relaxed sm:text-base md:text-lg">
               I&apos;m Girish Lade, a data scientist and full-stack developer
               based in Mumbai, India. I specialize in building intelligent
               systems that bridge data science and modern web development. My
@@ -59,7 +59,7 @@ export default function About() {
               viewport={{ once: true, amount: 0.2 }}
               className="mt-10"
             >
-              <p className="text-foreground/70 mb-4 text-sm font-medium uppercase tracking-wider">
+              <p className="text-foreground/70 mb-4 text-xs font-medium uppercase tracking-wider sm:text-sm">
                 Currently exploring
               </p>
               <div className="flex flex-wrap gap-2">
@@ -67,7 +67,7 @@ export default function About() {
                   <motion.span
                     key={tag}
                     variants={fadeUp}
-                    className="bg-accent/10 text-accent rounded-full px-4 py-1.5 text-sm font-medium"
+                    className="bg-accent/10 text-accent rounded-full px-3 py-1.5 text-xs font-medium sm:px-4 sm:text-sm"
                   >
                     {tag}
                   </motion.span>
