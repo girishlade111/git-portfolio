@@ -44,7 +44,7 @@ export default function FeaturedProject() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <motion.a
-              href="https://github.com/girishladegit0/research-ai-agent"
+              href="https://github.com/girishladegit0"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
