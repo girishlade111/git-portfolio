@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, GitFork } from "lucide-react";
-import Link from "next/link";
 import Container from "@/components/ui/container";
 
 const tech = ["TypeScript", "Multi-Agent Architecture", "LLM Orchestration"];
@@ -44,20 +43,24 @@ export default function FeaturedProject() {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <motion.a
               href="https://github.com/girishladegit0/research-ai-agent"
               target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.2 }}
               className="bg-accent text-white hover:bg-accent-light inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors"
             >
               <GitFork size={18} />
               View on GitHub
-            </Link>
+            </motion.a>
 
-            <Link
+            <motion.a
               href="https://github.com/girishladegit0/research-ai-agent"
               target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.2 }}
               className="border-accent text-accent hover:bg-accent hover:text-white inline-flex items-center gap-1.5 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors group"
             >
               Live Demo
@@ -69,7 +72,7 @@ export default function FeaturedProject() {
               >
                 <ArrowUpRight size={16} />
               </motion.span>
-            </Link>
+            </motion.a>
           </div>
         </motion.div>
       </Container>
