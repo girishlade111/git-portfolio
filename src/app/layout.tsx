@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(inter.variable, "font-sans")}>
         <Navbar />
-        {children}
+        <PageTransition>{children}</PageTransition>
         <Footer />
       </body>
     </html>
