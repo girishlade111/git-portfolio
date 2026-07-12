@@ -91,24 +91,31 @@ export default function Navbar() {
                 <span className="text-foreground text-lg font-semibold tracking-tight">
                   Girish Lade
                 </span>
-                <button
+                <motion.button
                   onClick={() => setMobileOpen(false)}
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.2 }}
                   className="text-foreground"
                   aria-label="Close menu"
                 >
                   <X size={24} />
-                </button>
+                </motion.button>
               </div>
               <nav className="flex flex-col gap-1 px-4 py-4">
                 {navLinks.map((link) => (
-                  <Link
+                  <motion.div
                     key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-foreground hover:text-accent rounded-lg px-3 py-3 text-base transition-colors"
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ duration: 0.2 }}
                   >
-                    {link.label}
-                  </Link>
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-foreground hover:text-accent rounded-lg px-3 py-3 text-base transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
                 ))}
               </nav>
               <div className="mt-auto px-8 pb-10">

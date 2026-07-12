@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { GitFork, Circle } from "lucide-react";
-import Link from "next/link";
 import Container from "@/components/ui/container";
 
 type Project = {
@@ -79,15 +78,17 @@ export default function Projects() {
                 <h3 className="text-foreground text-lg font-semibold tracking-tight">
                   {project.name}
                 </h3>
-                <Link
+                <motion.a
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.2 }}
                   className="text-muted hover:text-accent shrink-0 transition-colors"
                   aria-label={`View ${project.name} on GitHub`}
                 >
                   <GitFork size={18} />
-                </Link>
+                </motion.a>
               </div>
 
               <p className="text-foreground/65 mt-2 text-sm leading-relaxed">
