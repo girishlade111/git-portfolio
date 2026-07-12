@@ -12,13 +12,47 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://girishlade.vercel.app"),
   title: "Girish Lade — Data Scientist & AI Engineer Portfolio",
   description:
     "Data scientist and AI engineer specializing in React, TypeScript, and AI research agents. Explore projects, skills, and innovations in machine learning and artificial intelligence.",
+  keywords: [
+    "data scientist",
+    "AI engineer",
+    "machine learning",
+    "React",
+    "TypeScript",
+    "portfolio",
+    "Mumbai",
+  ],
+  authors: [{ name: "Girish Lade" }],
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://girishlade.vercel.app",
+    siteName: "Girish Lade Portfolio",
     title: "Girish Lade — Data Scientist & AI Engineer Portfolio",
     description:
       "Data scientist and AI engineer specializing in React, TypeScript, and AI research agents.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Girish Lade — Data Scientist & AI Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Girish Lade — Data Scientist & AI Engineer Portfolio",
+    description:
+      "Data scientist and AI engineer specializing in React, TypeScript, and AI research agents.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

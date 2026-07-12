@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="border-muted/20 border-t">
       <Container>
-        <div className="flex items-center justify-between py-6">
+        <div className="flex flex-col items-center gap-4 py-6 sm:flex-row sm:justify-between">
           <p className="text-muted text-xs">&copy; 2026 Girish Lade</p>
           <div className="flex items-center gap-3">
             {links.map((link) => (
