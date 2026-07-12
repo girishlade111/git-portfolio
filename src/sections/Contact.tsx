@@ -69,7 +69,7 @@ export default function Contact() {
           variants={stagger}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.2, margin: "-80px" }}
           onSubmit={(e) => e.preventDefault()}
           className="mx-auto mt-12 max-w-lg space-y-5"
         >
@@ -111,6 +111,8 @@ export default function Contact() {
 
           <motion.button
             variants={fadeUp}
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.2 }}
             type="submit"
             className="bg-accent text-white hover:bg-accent-light cursor-pointer rounded-full px-6 py-2.5 text-sm font-semibold transition-colors"
           >
