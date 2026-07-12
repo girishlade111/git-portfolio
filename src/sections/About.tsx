@@ -37,9 +37,11 @@ export default function About() {
               transition={{ duration: 0.2, ease: "easeOut" }}
               className="bg-muted/20 border-accent/30 h-48 w-48 overflow-hidden rounded-full border-2 sm:h-56 sm:w-56 md:h-64 md:w-64"
             >
-              <div className="flex h-full items-center justify-center text-5xl sm:text-6xl">
-                <span className="text-muted/40 select-none">GL</span>
-              </div>
+              <img
+                src="/profile.png"
+                alt="Girish Lade"
+                className="h-full w-full object-cover"
+              />
             </motion.div>
           </div>
 
