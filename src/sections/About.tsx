@@ -33,8 +33,8 @@ export default function About() {
         >
           <div className="flex justify-center md:col-span-2">
             <motion.div
-              whileHover={{ scale: 1.04 }}
-              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
               className="bg-muted/20 border-accent/30 h-64 w-64 overflow-hidden rounded-full border-2 sm:h-72 sm:w-72"
             >
               <div className="flex h-full items-center justify-center text-6xl">
