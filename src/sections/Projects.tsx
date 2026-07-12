@@ -54,7 +54,7 @@ export default function Projects() {
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.2, margin: "-80px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-foreground mb-10 text-3xl font-bold tracking-tight sm:text-4xl"
         >
@@ -65,7 +65,7 @@ export default function Projects() {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.2, margin: "-60px" }}
           className="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
