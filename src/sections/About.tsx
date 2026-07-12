@@ -56,7 +56,7 @@ export default function About() {
               variants={stagger}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               className="mt-10"
             >
               <p className="text-foreground/70 mb-4 text-sm font-medium uppercase tracking-wider">
