@@ -91,7 +91,7 @@ export default function Skills() {
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.2, margin: "-80px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-foreground mb-14 text-3xl font-bold tracking-tight sm:text-4xl"
         >
@@ -112,7 +112,7 @@ export default function Skills() {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, margin: "-40px" }}
+                viewport={{ once: true, amount: 0.2, margin: "-40px" }}
                 className="grid grid-cols-2 gap-2 sm:gap-3"
               >
                 {cat.skills.map((skill) => {
