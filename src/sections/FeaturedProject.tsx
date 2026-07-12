@@ -49,9 +49,10 @@ export default function FeaturedProject() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-accent text-white hover:bg-accent-light inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors"
-            >
+              >
               <GitFork size={18} />
               View on GitHub
+            </motion.a>           </motion.a>
             </Link>
 
             <Link
