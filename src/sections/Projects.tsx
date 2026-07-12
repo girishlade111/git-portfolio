@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { GitFork, Circle } from "lucide-react";
+import Link from "next/link";
 import Container from "@/components/ui/container";
 
 type Project = {
