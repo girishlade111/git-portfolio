@@ -27,16 +27,11 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /git-portfolio
-      - name: Move public assets into base path
-        run: |
-          for f in profile.png resume.pdf og-image.png; do
-            if [ -f "out/$f" ]; then
-              mv "out/$f" "out/git-portfolio/$f"
-            fi
-          done
+      - name: Add .nojekyll
+        run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: out/git-portfolio
+          path: out
 
   deploy:
     needs: build
