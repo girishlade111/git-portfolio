@@ -155,7 +155,7 @@ export default function Skills() {
                         className="text-accent/70 group-hover/pill:text-accent shrink-0 transition-colors duration-200"
                         size={14}
                       />
-                      <span className="text-foreground/80 group-hover/pill:text-foreground whitespace-nowrap text-sm font-medium leading-none transition-colors duration-200">
+                      <span className="text-foreground/80 group-hover/pill:text-foreground text-sm font-medium leading-none transition-colors duration-200">
                         {skill.name}
                       </span>
                     </motion.div>
