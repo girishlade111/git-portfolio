@@ -15,7 +15,7 @@ import {
   Layers,
   Palette,
   GitBranch,
-  Container,
+  Container as ContainerIcon,
   Table,
   type LucideIcon,
 } from "lucide-react";
@@ -68,7 +68,7 @@ const categories: Category[] = [
     Icon: Server,
     skills: [
       { name: "Git", icon: GitBranch },
-      { name: "Docker", icon: Container },
+      { name: "Docker", icon: ContainerIcon },
       { name: "PostgreSQL", icon: Database },
     ],
   },
