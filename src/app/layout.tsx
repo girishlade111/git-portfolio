@@ -9,8 +9,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Girish Portfolio",
-  description: "Personal portfolio built with Next.js",
+  title: "Girish Lade — Data Scientist & AI Engineer Portfolio",
+  description:
+    "Data scientist and AI engineer specializing in React, TypeScript, and AI research agents. Explore projects, skills, and innovations in machine learning and artificial intelligence.",
+  openGraph: {
+    title: "Girish Lade — Data Scientist & AI Engineer Portfolio",
+    description:
+      "Data scientist and AI engineer specializing in React, TypeScript, and AI research agents.",
+  },
 };
 
 export default function RootLayout({
@@ -19,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body className={clsx(inter.variable, "font-sans")}>{children}</body>
     </html>
   );

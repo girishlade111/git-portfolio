@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-background text-foreground antialiased;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#EDEAE2] text-[#1A1A1A] antialiased;
+  }
+
+  ::selection {
+    background-color: #5C7A5C;
+    color: #ffffff;
+  }
 }
