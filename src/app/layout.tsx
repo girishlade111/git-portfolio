@@ -31,6 +31,7 @@ export default function RootLayout({
       <body className={clsx(inter.variable, "font-sans")}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
