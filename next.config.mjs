@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/git-portfolio",
+  basePath: process.env.NODE_ENV === "production" ? "/git-portfolio" : "",
   images: {
     unoptimized: true,
   },
