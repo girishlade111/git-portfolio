@@ -10,11 +10,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#EDEAE2",
-        foreground: "#1A1A1A",
-        accent: "#5C7A5C",
-        "accent-light": "#8AA88A",
-        muted: "#A39C8E",
+        background: "#1a1a1a",
+        foreground: "#FFFFFF",
+        accent: "#FFFFFF",
+        "accent-light": "#e8e8e8",
+        "accent-dark": "#b0b0b0",
+        muted: "#777777",
+        "neu-highlight": "rgba(255,255,255,0.06)",
+        "neu-shadow": "rgba(0,0,0,0.4)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

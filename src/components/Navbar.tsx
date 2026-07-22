@@ -22,32 +22,27 @@ const navLinks = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
-  const bgOpacity = useTransform(scrollY, [0, 80], [0, 1]);
+  const shadowOpacity = useTransform(scrollY, [0, 80], [0, 1]);
 
   return (
     <>
       <motion.header
         style={{
-          backgroundColor: useTransform(
-            bgOpacity,
-            [0, 1],
-            ["rgba(237, 234, 226, 0)", "rgba(237, 234, 226, 1)"]
-          ),
           boxShadow: useTransform(
-            bgOpacity,
+            shadowOpacity,
             [0, 1],
             [
-              "0 0 0 0 rgba(0,0,0,0)",
-              "0 1px 3px 0 rgba(0,0,0,0.06)",
+              "0 0 0 rgba(0,0,0,0)",
+              "0 4px 12px rgba(0,0,0,0.2), 0 -2px 6px rgba(255,255,255,0.03)",
             ]
           ),
         }}
-        className="fixed inset-x-0 top-0 z-50 h-16"
+        className="fixed inset-x-0 top-0 z-50 h-16 bg-[#1a1a1a]"
       >
         <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="text-foreground text-lg font-semibold tracking-tight"
+            className="text-gradient-accent text-lg font-semibold tracking-tight"
           >
             Girish Lade
           </Link>
@@ -63,7 +58,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(true)}
-            className="text-foreground flex items-center md:hidden"
+            className="text-white/80 hover:text-white flex items-center md:hidden transition-colors"
             aria-label="Open menu"
           >
             <Menu size={24} />
@@ -79,24 +74,24 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileOpen(false)}
-              className="fixed inset-0 z-40 bg-black/30 md:hidden"
+              className="fixed inset-0 z-40 bg-black/50 md:hidden"
             />
             <motion.aside
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 300 }}
-              className="bg-background fixed inset-y-0 right-0 z-50 flex w-72 flex-col shadow-xl md:hidden"
+              className="fixed inset-y-0 right-0 z-50 flex w-72 flex-col bg-[#1a1a1a] shadow-[0_0_24px_rgba(0,0,0,0.4),-4px_0_12px_rgba(255,255,255,0.03)] md:hidden"
             >
               <div className="flex items-center justify-between px-6 py-5">
-                <span className="text-foreground text-lg font-semibold tracking-tight">
+                <span className="text-gradient-accent text-lg font-semibold tracking-tight">
                   Girish Lade
                 </span>
                 <motion.button
                   onClick={() => setMobileOpen(false)}
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.2 }}
-                  className="text-foreground"
+                  className="text-white/80 hover:text-white"
                   aria-label="Close menu"
                 >
                   <X size={24} />
@@ -112,7 +107,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
-                      className="text-foreground hover:text-accent rounded-lg px-3 py-3 text-base transition-colors"
+                      className="text-white/70 hover:text-accent neu-sm block rounded-lg px-3 py-3 text-base transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -134,7 +129,9 @@ function NavLink({ href, children }: { href: string; children: string }) {
   return (
     <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.2 }}>
       <Link href={href} className="group relative text-sm font-medium">
-        <span className="text-foreground">{children}</span>
+        <span className="text-white/70 group-hover:text-white transition-colors">
+          {children}
+        </span>
         <motion.span
           className="bg-accent absolute -bottom-0.5 left-0 h-[2px]"
           initial={{ width: 0 }}
@@ -155,7 +152,7 @@ function ResumeButton() {
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.2 }}
       whileTap={{ scale: 0.95 }}
-      className="border-muted text-foreground hover:bg-accent hover:text-white flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium transition-colors"
+      className="neu-sm flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-white/80 hover:text-white neu-hover"
       aria-label="Download resume"
     >
       <FileText size={16} />

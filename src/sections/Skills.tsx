@@ -101,7 +101,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2, margin: "-80px" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-foreground text-3xl font-bold tracking-tight sm:text-4xl"
+            className="text-gradient text-3xl font-bold tracking-tight sm:text-4xl"
           >
             Skills &amp; Technologies
           </motion.h2>
@@ -126,15 +126,13 @@ export default function Skills() {
             <motion.div
               key={cat.label}
               variants={cardReveal}
-              className="border-muted/10 bg-background group relative rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5"
+              className="neu neu-hover group relative p-6"
             >
-              <span className="bg-accent/10 absolute right-0 top-0 h-20 w-20 translate-x-6 -translate-y-6 rounded-full opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-30" />
-
               <div className="relative mb-5 flex items-center gap-3">
-                <span className="bg-accent/10 flex items-center justify-center rounded-xl p-2.5 transition-colors duration-200 group-hover:bg-accent/20">
+                <span className="neu-icon flex items-center justify-center p-2.5">
                   <cat.Icon className="text-accent" size={20} />
                 </span>
-                <h3 className="text-foreground text-sm font-semibold uppercase tracking-wider">
+                <h3 className="text-white/75 text-sm font-semibold uppercase tracking-wider">
                   {cat.label}
                 </h3>
               </div>
@@ -149,13 +147,13 @@ export default function Skills() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.05, duration: 0.3, ease: "easeOut" }}
-                      className="border-muted/15 hover:border-accent hover:bg-accent/5 group/pill flex cursor-default items-center gap-2 rounded-lg border px-3 py-2 transition-all duration-200"
+                      className="neu-tag group/pill flex cursor-default items-center gap-2 rounded-lg px-3 py-2"
                     >
                       <Icon
-                        className="text-accent/70 group-hover/pill:text-accent shrink-0 transition-colors duration-200"
+                        className="text-accent/60 group-hover/pill:text-accent shrink-0 transition-colors duration-200"
                         size={14}
                       />
-                      <span className="text-foreground/80 group-hover/pill:text-foreground text-sm font-medium leading-none transition-colors duration-200">
+                      <span className="text-white/55 group-hover/pill:text-white text-sm font-medium leading-none transition-colors duration-200">
                         {skill.name}
                       </span>
                     </motion.div>

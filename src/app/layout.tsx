@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -63,6 +64,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(inter.variable, "font-sans")}>
+        <ScrollProgress />
+        <div className="animated-bg" />
         <Navbar />
         <PageTransition>{children}</PageTransition>
         <Footer />

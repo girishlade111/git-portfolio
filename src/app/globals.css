@@ -8,11 +8,105 @@
   }
 
   body {
-    @apply bg-[#EDEAE2] text-[#1A1A1A] antialiased;
+    @apply bg-[#1a1a1a] text-[#FFFFFF] antialiased;
   }
 
   ::selection {
-    background-color: #5C7A5C;
+    background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
   }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .animated-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(135deg, #1a1a1a 0%, #222222 25%, #1a1a1a 50%, #222222 75%, #1a1a1a 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 40s ease infinite;
+  }
+
+  .neu {
+    background: #1a1a1a;
+    border-radius: 16px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4),
+                -8px -8px 16px rgba(255, 255, 255, 0.06);
+  }
+
+  .neu-sm {
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4),
+                -4px -4px 8px rgba(255, 255, 255, 0.06);
+  }
+
+  .neu-inset {
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.4),
+                inset -4px -4px 8px rgba(255, 255, 255, 0.06);
+  }
+
+  .neu-hover {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .neu-hover:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.45),
+                -10px -10px 20px rgba(255, 255, 255, 0.07);
+    transform: translateY(-2px);
+  }
+
+  .neu-tag {
+    background: #1a1a1a;
+    border-radius: 9999px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35),
+                -3px -3px 6px rgba(255, 255, 255, 0.05);
+  }
+
+  .neu-tag-accent {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 9999px;
+    color: #FFFFFF;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.15),
+                inset -2px -2px 4px rgba(255, 255, 255, 0.04);
+  }
+
+  .neu-icon {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35),
+                -3px -3px 6px rgba(255, 255, 255, 0.05);
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #FFFFFF, rgba(255, 255, 255, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(to right, #FFFFFF, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

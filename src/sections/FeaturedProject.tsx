@@ -15,17 +15,17 @@ export default function FeaturedProject() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.2, margin: "-80px" }}
           transition={{ duration: 0.55, ease: "easeOut" }}
-          className="bg-accent/8 rounded-3xl p-6 sm:p-8 lg:p-12 xl:p-16"
+          className="neu neu-hover p-6 sm:p-8 lg:p-12 xl:p-16"
         >
-          <span className="bg-accent/15 text-accent mb-4 inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+          <span className="neu-tag-accent mb-4 inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider">
             Featured Project
           </span>
 
-          <h3 className="text-foreground text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+          <h3 className="text-gradient text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
             research-ai-agent
           </h3>
 
-          <p className="text-foreground/75 mt-4 max-w-2xl text-sm leading-relaxed sm:text-base lg:text-lg">
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/55 sm:text-base lg:text-lg">
             Next-generation multi-agent research engine transforming raw queries
             into structured, verified intelligence reports. Built with
             TypeScript.
@@ -35,7 +35,7 @@ export default function FeaturedProject() {
             {tech.map((t) => (
               <span
                 key={t}
-                className="bg-accent/10 text-accent rounded-full px-3 py-1 text-xs font-medium sm:text-sm"
+                className="neu-tag-accent rounded-full px-3 py-1 text-xs font-medium sm:text-sm"
               >
                 {t}
               </span>
@@ -49,7 +49,8 @@ export default function FeaturedProject() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
-              className="bg-accent text-white hover:bg-accent-light inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors"
+              whileTap={{ scale: 0.97 }}
+              className="neu-sm inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white neu-hover"
             >
               <GitFork size={18} />
               View on GitHub
@@ -61,7 +62,14 @@ export default function FeaturedProject() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
-              className="border-accent text-accent hover:bg-accent hover:text-white inline-flex items-center gap-1.5 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors group"
+              whileTap={{ scale: 0.97 }}
+              className="neu-sm inline-flex items-center gap-1.5 rounded-full border px-5 py-2.5 text-sm font-semibold neu-hover group"
+              style={{
+                borderColor: "rgba(255, 255, 255, 0.15)",
+                color: "#FFFFFF",
+                boxShadow:
+                  "4px 4px 8px rgba(0,0,0,0.4), -4px -4px 8px rgba(255,255,255,0.06), inset 0 0 0 1px rgba(255,255,255,0.15)",
+              }}
             >
               Live Demo
               <motion.span

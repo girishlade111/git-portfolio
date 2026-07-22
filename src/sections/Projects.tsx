@@ -55,7 +55,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2, margin: "-80px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-foreground mb-10 text-3xl font-bold tracking-tight sm:text-4xl"
+          className="text-gradient mb-10 text-3xl font-bold tracking-tight sm:text-4xl"
         >
           Other Projects
         </motion.h2>
@@ -72,10 +72,10 @@ export default function Projects() {
               key={project.name}
               variants={cardVariants}
               whileHover={{ y: -4 }}
-              className="border-muted/30 hover:border-accent group rounded-2xl border p-6 transition-colors"
+              className="neu neu-hover p-6"
             >
               <div className="flex items-start justify-between gap-4">
-                <h3 className="text-foreground break-all text-lg font-semibold tracking-tight">
+                <h3 className="text-white break-all text-lg font-semibold tracking-tight">
                   {project.name}
                 </h3>
                 <motion.a
@@ -84,20 +84,20 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.2 }}
-                  className="text-muted hover:text-accent shrink-0 transition-colors"
+                  className="text-white/40 hover:text-accent shrink-0 transition-colors"
                   aria-label={`View ${project.name} on GitHub`}
                 >
                   <GitFork size={18} />
                 </motion.a>
               </div>
 
-              <p className="text-foreground/65 mt-2 text-sm leading-relaxed">
+              <p className="mt-2 text-sm leading-relaxed text-white/50">
                 {project.description}
               </p>
 
               <div className="mt-4 flex items-center gap-1.5">
                 <Circle fill={project.color} color={project.color} size={10} />
-                <span className="text-muted text-xs font-medium">
+                <span className="text-white/40 text-xs font-medium">
                   {project.language}
                 </span>
               </div>

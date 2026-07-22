@@ -30,13 +30,17 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="grid items-center gap-12 md:grid-cols-5"
+          className="neu neu-hover grid items-center gap-12 p-6 sm:p-8 md:grid-cols-5 lg:p-12"
         >
           <div className="flex justify-center md:col-span-2">
             <motion.div
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="bg-muted/20 border-accent/30 h-48 w-48 overflow-hidden rounded-full border-2 sm:h-56 sm:w-56 md:h-64 md:w-64"
+              className="h-48 w-48 overflow-hidden rounded-full sm:h-56 sm:w-56 md:h-64 md:w-64"
+              style={{
+                boxShadow:
+                  "8px 8px 16px rgba(0,0,0,0.4), -8px -8px 16px rgba(255,255,255,0.06), 0 0 0 2px rgba(255,255,255,0.15)",
+              }}
             >
               <img
                 src={asset("/profile.png")}
@@ -47,7 +51,7 @@ export default function About() {
           </div>
 
           <div className="md:col-span-3">
-            <p className="text-foreground text-sm leading-relaxed sm:text-base md:text-lg">
+            <p className="text-white/75 text-sm leading-relaxed sm:text-base md:text-lg">
               I&apos;m Girish Lade, a data scientist and full-stack developer
               based in Mumbai, India. I specialize in building intelligent
               systems that bridge data science and modern web development. My
@@ -62,7 +66,7 @@ export default function About() {
               viewport={{ once: true, amount: 0.2 }}
               className="mt-10"
             >
-              <p className="text-foreground/70 mb-4 text-xs font-medium uppercase tracking-wider sm:text-sm">
+              <p className="text-white/35 mb-4 text-xs font-medium uppercase tracking-wider sm:text-sm">
                 Currently exploring
               </p>
               <div className="flex flex-wrap gap-2">
@@ -70,7 +74,7 @@ export default function About() {
                   <motion.span
                     key={tag}
                     variants={fadeUp}
-                    className="bg-accent/10 text-accent rounded-full px-3 py-1.5 text-xs font-medium sm:px-4 sm:text-sm"
+                    className="neu-tag-accent rounded-full px-3 py-1.5 text-xs font-medium sm:px-4 sm:text-sm"
                   >
                     {tag}
                   </motion.span>
