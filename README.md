@@ -182,3 +182,9 @@ The static output is written to the `out/` directory.
 | Lucide React | Icons |
 | clsx | Class name utility |
 | GitHub Actions | CI/CD → Pages |
+
+## Credits
+
+Built by **Girish Lade** — https://ladestack.in
+
+> This is a customized fork of an open-source portfolio template, personalized by Girish Lade.
